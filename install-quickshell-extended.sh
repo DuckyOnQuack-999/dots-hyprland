@@ -209,7 +209,7 @@ else
 fi
 EOF
     
-    chmod +x "$HOME/.local/bin/reload-qus"
+    chmod +x "$HOME/.local/bin/reload-quickshell"
     log_success "reload-quickshell script created"
     
     # Add to PATH

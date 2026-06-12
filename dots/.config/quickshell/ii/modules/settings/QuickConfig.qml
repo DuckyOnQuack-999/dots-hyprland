@@ -116,6 +116,34 @@ ContentPage {
                         text: Translation.tr("Random osu! seasonal background\nImage is saved to ~/Pictures/Wallpapers")
                     }
                 }
+                
+                RippleButtonWithIcon {
+                    enabled: !randomWallProc.running
+                    Layout.fillWidth: true
+                    materialIcon: "public"
+                    mainText: randomWallProc.running ? Translation.tr("Be patient...") : Translation.tr("Online Wallpapers")
+                    onClicked: {
+                        // Launch our online wallpaper widget
+                        Quickshell.execDetached(["quickshell", "--extension", "wallpaper-widget"]);
+                    }
+                    StyledToolTip {
+                        text: Translation.tr("Browse online wallpapers from multiple sources")
+                    }
+                }
+                RippleButtonWithIcon {
+                    enabled: !randomWallProc.running
+                    Layout.fillWidth: true
+                    materialIcon: "public"
+                    mainText: randomWallProc.running ? Translation.tr("Be patient...") : Translation.tr("Online Wallpapers")
+                    onClicked: {
+                        // Launch our online wallpaper widget
+                        Quickshell.execDetached(["quickshell", "--extension", "wallpaper-widget"]);
+                    }
+                    StyledToolTip {
+                        text: Translation.tr("Browse online wallpapers from multiple sources")
+                    }
+                }
+                
                 RippleButtonWithIcon {
                     Layout.fillWidth: true
                     materialIcon: "wallpaper"
