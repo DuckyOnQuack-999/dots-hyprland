@@ -1,0 +1,35 @@
+# Local git configuration for dots-hyprland
+# Source this file in your shell or add to ~/.gitconfig
+
+[alias]
+    # Quick workflow commands
+    qs-status = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh status
+    qs-fetch = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh fetch
+    qs-changes = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh show-changes
+    qs-merge = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh merge
+    qs-rebase = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh rebase
+    qs-push = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh push
+    qs-backup = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh backup
+    qs-help = !/home/duckyonquack999/GitHub-Repositories/dots-hyprland/update-workflow.sh help
+
+    # Quick branch switching
+    qs-main = checkout main
+    qs-extended = checkout quickshell-extended
+
+    # Useful shortcuts
+    qs-log = log --oneline --graph --decorate -20
+    qs-diff = diff quickshell-extended..upstream/main
+    qs-stash = stash push -m "quickshell-extended WIP"
+    qs-pop = stash pop
+
+[branch "quickshell-extended"]
+    description = Quickshell extensions and customizations for end-4's dots-hyprland
+    mergeoptions = --no-ff
+
+[merge]
+    # Use ort strategy for better conflict resolution
+    strategy = ort
+
+[rebase]
+    # Automatically stash before rebase
+    autostash = true
