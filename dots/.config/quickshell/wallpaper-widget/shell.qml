@@ -252,11 +252,12 @@ ShellRoot {
                 spacing: 4
 
                 // Image thumbnail area
-                Item {
+                Rectangle {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     clip: true
                     radius: 8
+                    color: "#21262d"
 
                     // Thumbnail image
                     Image {
