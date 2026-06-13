@@ -124,7 +124,7 @@ ContentPage {
                     mainText: randomWallProc.running ? Translation.tr("Be patient...") : Translation.tr("Online Wallpapers")
                     onClicked: {
                         // Launch our online wallpaper widget
-                        Quickshell.execDetached(["quickshell", "--extension", "wallpaper-widget"]);
+                        Quickshell.execDetached(["quickshell", "-c", "wallpaper-widget"]);
                     }
                     StyledToolTip {
                         text: Translation.tr("Browse online wallpapers from multiple sources")
@@ -137,7 +137,7 @@ ContentPage {
                     mainText: randomWallProc.running ? Translation.tr("Be patient...") : Translation.tr("Online Wallpapers")
                     onClicked: {
                         // Launch our online wallpaper widget
-                        Quickshell.execDetached(["quickshell", "--extension", "wallpaper-widget"]);
+                        Quickshell.execDetached(["quickshell", "-c", "wallpaper-widget"]);
                     }
                     StyledToolTip {
                         text: Translation.tr("Browse online wallpapers from multiple sources")
